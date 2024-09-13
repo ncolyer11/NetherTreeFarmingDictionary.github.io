@@ -303,7 +303,7 @@
     - Concept
   description: >-
     The effect of quasi-powering a piston, dropper or dispenser. A good way to
-    visualize when a block is being quasi-powering is to imagine a redstone lamp
+    visualise when a block is being quasi-powering is to imagine a redstone lamp
     above the component. If that lamp was to be on in that location, the block
     is quasi-powered. Quasi-powering usually doesn't update the component being
     QCed, which results in the component not "realising" it should activate or
@@ -511,17 +511,17 @@
 
 - term: External Processing
   tags:
-    - Optimization
+    - Optimisation
   description: >-
     Placing the clock and/or other vital components for a module (usually b36 TNT) outside the module's volume, allowing you to trigger multiple stacked modules from a single universal clock.
     This reduces materials cost and lag compared to triggering each module individually.
 
 - term: Auxiliary Processing
   tags:
-    - Optimization
+    - Optimisation
   description: >-
     Modules (usually b36 TNT) that function independently but benefit from additional components placed outside their volume. 
-    These benefits can include faster clock speed, additional customizability (e.g., different modes), and lag optimisation.
+    These benefits can include faster clock speed, additional customisability (e.g., different modes), and lag optimisation.
 
 - term: Vines Region Manipulation (VRM)
   tags:
