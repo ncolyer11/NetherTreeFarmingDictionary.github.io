@@ -1,27 +1,3 @@
-- term: Aligner
-  tags:
-    - StorageTech Contraption
-  description: >-
-    It aligns items within a block to ensure some sort of behavior. More basic
-    concepts involve simply letting items in a water or ice stream hit against a
-    block with a certain hitbox, while more complex ones involve precisely timed
-    contraptions, see @[Perfect aligner]. The more simple use cases involve using
-    a chest, dragon egg, 2 or 3 stack of pickles, cake or some other block to
-    align the items between two blocks such that they go over some hoppers and
-    are inside a water stream at the same time. The use of different hitboxes
-    allows for some more complex behaviour, where items can cycle exactly twice
-    in a loop and then exit, or you can send many channels along one water line
-    and have each channel exit in a different spot of the stream.
-
-- term: Batcher
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A Batcher groups item entities together before periodically releasing them
-    into a waterstream or iceline. This is done to improve lag and because some
-    filters ( Especially 2x filters ) would be on cooldown much less often and
-    therefore miss less or no items.
-
 - term: Binary
   aka:
     - bin
@@ -65,75 +41,7 @@
     updated. This term is sometimes used to refer to a component that is being
     QC powered by saying it's "BUD powered".
 
-- term: Box Comparer
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A Box Comparer is a contraption that takes two boxes as input, and compares
-    them by signal strength. A Box comparer normally has dedicated outputs for
-    the fuller and less full boxes.
 
-    Box comparers are used in many contraptions, one example is making sure that
-    @[Mergers](Merger) get the fuller box in the correct input. 
-
-- term: Box Detection
-  tags:
-    - Feature
-    - StorageTech Concept
-  description: >-
-    Usually used as a way to tag @[Loaders](Loader) and @[Box Displays](Box
-    Display) that restart themselves when boxes come in and they were previously
-    empty.
-
-- term: Box Display
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A contraption that displays a shulker box and has some or all of the
-    following features:
-
-    a button to dispense a new box, breaking of the box when it empties,
-    automatically dispensing a new box when the old one is broken, storage for
-    new shulker boxes, access to said storage, and some others, like hopper
-    locking and not hiding boxes from the player in inaccessible inventories
-    (called no buffer).
-
-- term: Box Separator
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A Box Separator is a contraption that takes boxes as input and separates
-    them into different outputs based on their contents. This could for example
-    be a contraption that takes single item-type boxes and has different outputs
-    for boxes with 16-stackables and 64-stackables 
-
-- term: Box Sorter
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A Box Sorter is a contraption that takes in boxes of a single item-type,
-    takes the first item out and assigns the box to a storage @[Slice] that
-    matches the filter of that item. 
-
-- term: Bulk Storage
-  tags:
-    - StorageTech Contraption
-  description: >-
-    At it's simplest, a bulk storage is just a system that stores a lot of
-    items, usually a single type per module and in box form. The challenge
-    usually comes in trying to make the system compact, extremely lag friendly
-    (through @[Hopper-locked] storage and other techniques), and adding features
-    like @[Item Call] and @[Encoded] storage.
-
-- term: Chest Hall
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A hall containing chests for items. It usually come in @[slices](slice) so
-    that it can be stacked and extended as large as needed. They differ widely
-    in functionality and amount of items available in each slice. Both encoded
-    chest halls and fixed item sorter based chest halls exists. These are
-    usually the main @[UI] elements of a storage system.
 
 - term: Comparator Update Detector
   aka:
@@ -152,7 +60,7 @@
     - Bad Practice
     - StorageTech Concept
   description: >-
-    A term used for when 2 tiled @[Slices](slice) are interfering with each other
+    A term used for when 2 tiled @[Cores](Core) are interfering with each other
     in any situation. 
 
 - term: Decoder
@@ -237,48 +145,6 @@
     signal, a @[Hexadecimal] signal or, less often, octal or quaternary, with
     either multiple or single digits.
 
-- term: Encoder
-  tags:
-    - StorageTech Contraption
-  description: >-
-    An Encoder has two main meanings in storage tech: A contraption that
-    translates items into a code, where code can be any sort of signal in any
-    base (bin, hex, other less used ones) or other codes (block event delay),
-    or a contraption that translates a player input (say a selection panel)
-    into code. In addition, in computational redstone, this sometimes refers to
-    decreasing the size of the base used in the code: for example hex to bin.
-    see @[Transcoder].
-
-- term: Fill Sorter
-  aka:
-    - IsEmpty
-    - IsFull
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A Fill Sorter is a @[Box Separator] that has different outputs based on how
-    full the box is, usually Empty / Full / Partial.
-
-    IsEmpty is a Fill Sorter that only has outputs for empty and not-empty (
-    Full / Partial )
-
-    IsFull is a Fill Sorter that only has outputs for full and not-full ( Empty
-    / Partial )
-
-- term: Filtered Loader
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A @[Loader] combined with an item filter that fills a box with just one item
-    type.
-
-- term: Fixed Sorter
-  tags:
-    - StorageTech Contraption
-  description: >-
-    Short for fixed type item sorter: a sorter that filters out one single item
-    type and can't be changed without manual intervention. 
-
 - term: FPS
   aka:
     - Frames Per Second
@@ -312,24 +178,16 @@
     A default repeater when freshly placed is a 2gt- or one
     redstone-tick-repeater.
 
-- term: Global Output
-  tags:
-    - Feature
-    - StorageTech Concept
-  description: >-
-    A contraption, usually a @[1-wide tileable](n-Wide Tileable) one, that has
-    only one output for all the @[Slices](Slice), in contrast to one output per
-    slice (see @[Slice Preservation]).
-
 - term: Global/Local
   tags:
     - StorageTech Concept
   description: >-
     Annotates if a signal comes from a global system ( a "brain" ), or from
-    within a @[Slice].
+    within a @[Core]. Also known as @[External Processing].
 
-    For example, one global clock could send signals to 8 slices on an interval,
-    or all 8 slices could have their own clock.
+    For example, one global timing and logic unit could send signals to 100 cores in an @n-core] 
+    tree farm with a sufficient delay between each @[Core], rather than each core having its own
+    timing logic/brain and causing excessively more lag.
 
 - term: Hexadecimal
   aka:
@@ -358,55 +216,6 @@
     written as an integer or fraction (e.g. "3x or 1/2x hopper speed"). See
     also: @[Dropper speed].
 
-- term: Hopper-locked
-  tags:
-    - Feature
-    - Good Practice
-    - StorageTech Concept
-  description: >-
-    Used to tag contraptions that lock their hoppers when the hoppers are not
-    needed. This is because hoppers are otherwise very laggy.
-
-- term: Item Call
-  tags:
-    - Feature
-    - StorageTech Contraption
-  description: >-
-    A device, mechanism or feature that allows the user to request items. The
-    requested items may land in a user accessible inventory or be used to
-    restock some component. Some systems can also use item call to automatically
-    restock, for example from @[Bulk Storage].
-
-- term: Keygen
-  aka:
-    - Item Wanker
-  tags:
-    - StorageTech Contraption
-  description: >-
-    Usually part of a @[Box Sorter], a keygen is a contraption that takes one
-    item out of a box, breaks it and sends the item and sends one through one
-    hopper or @[Dropperline] and the other through another one, with some delay.
-
-- term: Liquid Update Detector
-  aka:
-    - LUD
-  tags:
-    - Contraption
-  description: >-
-    A Liquid Update Detector (LUD) is a device that uses liquids to detect a
-    special set of updates, some of which can be detected with a @[Block Update
-    Detector], with a @[Comparator Update Detector] or with an observer, but
-    some of which are exclusively detected by LUDs. After detecting the update
-    and triggering, it usually resets the liquid to a state where it can detect
-    an update again.
-
-- term: Loader
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A contraption that fills a shulkerbox with items and then breaks the
-    shulkerbox.
-
 - term: Locational
   tags:
     - Bad Practice
@@ -417,32 +226,6 @@
     by redstone dust updates themselves being locational: the way they notify
     their neighbors of their updates is not consistent across locations in the
     world.
-
-- term: Merger
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A Merger is a contraption that takes 2 boxes as input, and merges them into
-    one.
-
-    Mergers can work of mixed boxes, however most mergers assume that both boxes
-    only 
-
-    contain one itemtype and are often used in conjunction with
-    @[Splitters](Splitter).
-
-- term: Mixed Box
-  tags:
-    - StorageTech Concept
-  description: A shulker box with multiple item types.
-
-- term: Mixed loader
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A @[Loader]  that can handle multiple itemtypes going to the same box.
-    Fullness detection is usually done by reading that items are backing up in
-    the container ( hopper / dropper ) feeding the box.
 
 - term: MSPT
   aka:
@@ -457,15 +240,6 @@
     MSPT is also used as a measure of how performance-intensive a contraption
     is by seeing how much the MSPT increases by running/loading it.
 
-- term: Multi Item Sorter
-  aka:
-    - MIS
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A type of item sorter (system) that sorts multiple item-types into a single
-    chest or group of chests, usually used to reduce space used by single
-    item-type sorters to group not too common items into categories.
 
 - term: n-wide AB tileable
   aka:
@@ -476,10 +250,10 @@
     - Concept
   description: >-
     An extension of @[n-Wide tileable], but where a solution has been provided
-    by the author on how to put 2 @[Slices](Slice) of the same system next to
+    by the author on how to put 2 @[Cores](Core) of the same system next to
     each other, by moving/editing some components within the system. The capital
-    letters ( AB, or ABC, or ABCD, ... ) annotate how the slices are tiled, and
-    how many versions of the slice exist to achieve a result.
+    letters ( AB, or ABC, or ABCD, ... ) annotate how the cores are tiled, and
+    how many versions of the core exist to achieve a result.
 
 - term: n-Wide tileable
   aka:
@@ -489,22 +263,10 @@
     - Feature
     - Concept
   description: >-
-    Annotates the width of a slice, and whether or not you can build them right
+    Annotates the width of a core, and whether or not you can build them right
     next to each other. There are systems that are 1 wide, but you can't put 2
     next to each other due to @[Crosstalk], so they don't get this annotation.
     Sometimes they are @[n-Wide AB Tileable] instead.
-
-- term: Pair Searcher
-  aka:
-    - Pair Finder
-    - Pair Assembler
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A pair searcher is a contraption that takes in multiple boxes (usually
-    single item-type boxes) and outputs pairs of boxes so that the boxes of each
-    pair have the same item type. They differ in speed, how they handle single
-    boxes (ones that don't have a matching pair) and implementation in general.
 
 - term: Parallel codes
   tags:
@@ -514,19 +276,6 @@
     through individual wires or lines This usually allows for faster and easier
     to use codes than @[Serial codes], but it tends to be more expensive and
     bigger.
-
-- term: Perfect aligner
-  aka:
-    - 4D aligner
-  tags:
-    - StorageTech Contraption
-  description: >-
-    Perfect item aligner refers to a contraption that aligns items in all three
-    axes before sending them down a stream, where they usually get picked up by
-    hoppers. Since these contraptions are usually ran at @[Hopper speed],  the
-    items need to have a perfect timing between them, so that they don't reach a
-    hopper during its cooldown stage, hence why these are also called 4D
-    aligners (3D+time). 
 
 - term: Peripheral
   tags:
@@ -546,24 +295,6 @@
     time it tries to extend, and storage systems tend to have a lot of TEs. This
     effect is partly mitigated in 1.17+ and greatly mitigated by the Lithium mod.
 
-- term: Precision Hopper
-  tags:
-    - Feature
-    - StorageTech Contraption
-  description: >-
-    A hopper that is unlocked in the same tick as it's supposed to suck up an
-    item. If the item entity is created in that tick, as it would be with for
-    example timing a shulker box breaking correctly, there will be 0 physics
-    enacted on that item. This makes it not only extremely reliable as there are
-    no physics issues, but also might be lazy chunk compatible [Needs proof] .
-
-- term: Precision Loader
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A @[Loader] that makes use of a @[Precision Hopper] to achieve @[Slice
-    Preservation]
-
 - term: Quasi connectivity
   aka:
     - QC
@@ -579,11 +310,6 @@
     for @[Block Update Detector], and people even sometimes say "BUD powered"
     rather than "quasi powered".
 
-- term: Sequential Sorter
-  tags:
-    - StorageTech Contraption
-  description: ''
-
 - term: Serial codes
   tags:
     - Concept
@@ -591,15 +317,6 @@
     A code is said to be serial if the bits of the signal are sent one after the
     other through a single wire. This is more space and resource efficient than
     @[Parallel codes], but usually slower and harder to implement.
-
-- term: Serializer/Deserializer
-  tags:
-    - StorageTech Contraption
-  description: >-
-    Components used to convert @[Serial codes] into @[Parallel codes] or
-    viceversa. These sometimes also act as @[Encoders](Encoder) or
-    @[Decoders](Decoder), in the computational redstone sense. For example
-    serial hex to parallel binary is a deserializer encoder.
 
 - term: Silent
   tags:
@@ -610,32 +327,10 @@
     droppers or dispensers failing to fire. Silent contraptions usually avoid
     all of those.
 
-- term: Slice
+- term: Core
   tags:
-    - Concept
+    - Concept 
   description: A repeatable ( Preferably tileable ) component within a system.
-
-- term: Slice Preservation
-  aka:
-    - Local Output
-  tags:
-    - Feature
-    - StorageTech Concept
-  description: >-
-    A contraption is said to be slice preserving if it outputs the shulker boxes
-    or items within the slice, in contrast to @[Global Output], where there's
-    one output for all @[Slices](Slice). This term is mostly used for @[1-Wide
-    Tileable](N-Wide Tileable) contraptions. Since some systems are only mostly
-    slice preserving, but fail to be so in some specific condition or with a
-    very low change, some people use the term perfect slice preservation for a
-    system that does not have said flaws.
-
-- term: Smart box display
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A @[Box Display] that will only break the shulker box when it's both empty
-    and closed.
 
 - term: Solid state
   tags:
@@ -647,28 +342,10 @@
     solid state contraption (in the loose way) with pistons by having them never
     spit out the block, i.e. powering them with long pulses only.
 
-- term: Splitter
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A Splitter is a contraption that takes a @[Mixed Box] as input and unloads
-    the box into one box per item type.
-
 - term: ss
   tags:
     - Concept
   description: Abbreviation for redstone dust/comparator Signal Strength
-
-- term: Temp Storage
-  tags:
-    - StorageTech Contraption
-  description: >-
-    Short for "temporary storage". It's not a way to refer to a storage system
-    that will only be used temporarily. It refers to a storage system in which
-    boxes are stored temporarily, usually until a second box of the same item
-    type reaches the system and they can be combined in a @[Merger] and then be
-    sent to a more final storage (like @[Bulk Storage], @[Chest Hall] or
-    others).
 
 - term: Tile Entity
   aka:
@@ -724,31 +401,6 @@
     start to slow down. Mods such as Carpet Mod are able to stop, slow down, 
     or speed up the tick speed of a server, which can be useful for testing.
 
-- term: Transcoder
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A device or contraption to convert between encodings of a signal: @[Binary]
-    to @[Hexadecimal], hex to octal, pulse length to binary, block event delay
-    to overloaded comparator, etc.
-
-- term: Unstackable filter
-  tags:
-    - StorageTech Contraption
-  description: >-
-    A system to filter out unstackable items from a stream of stackable items.
-    Usually done by reading the signal strength the item produces when in a
-    container.
-
-- term: Unstackable sorter
-  tags:
-    - StorageTech Contraption
-  description: >-
-    An item sorter that sorts unstackable items into different categories.
-    Regular item sorters can not be used for this use case, because the items
-    don't stack, so unique behaviors of each item type have to be used in order
-    to separate them. Not to be confused with @[Unstackable filter] 
-
 - term: User interface
   aka:
     - UI
@@ -757,15 +409,3 @@
   description: >-
     User interface. The part of a contraption or system that the end user
     interacts with, regardless of the inner workings of the system.
-
-- term: Variable sorter
-  tags:
-    - StorageTech Contraption
-  description: >-
-    An item filter that does not always filter for the same item, but instead
-    can be remapped,  meaning getting the item type reassigned (in contrast with
-    @[Fixed Sorter]). There are many different types of variable sorters: *
-    Timer-based variable sorters unmap when a timer runs out. * Self-resetting
-    variable sorters try to unmap constantly but fail if more items come in of
-    the same type. * Globally-Triggered variable sorters unmap when receiving a
-    signal from a global trigger
