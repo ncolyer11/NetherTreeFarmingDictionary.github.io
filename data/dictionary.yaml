@@ -328,7 +328,7 @@
     visualize when a block is being quasi-powering is to imagine a redstone lamp
     above the component. If that lamp was to be on in that location, the block
     is quasi-powered. Quasi-powering usually doesn't update the component being
-    QCed, which results in the component not "realizing" it should activate or
+    QCed, which results in the component not "realising" it should activate or
     deactivate until it receives an update. For this reason, QC is often  used
     for @[Block Update Detector], and people even sometimes say "BUD powered"
     rather than "quasi powered".
@@ -442,7 +442,7 @@
     - Tools
   description: >-
     A collection of huge fungi/nether tree farm related calculators and simulators combined under the alias 'Stemlight'.
-    Is widely used for optimisation nether tree farm layouts to reach the highest theoretical level of stem and/or shroomlight output whilst maintaining self-sustainability. Also used in researching interplay between the many interoperating mechanisms in a playerless nether tree farm core, and displaying charts on a variety of nether tree farm statistics and phenomena.
+    Is widely used for optimising nether tree farm layouts to reach the highest theoretical level of stem and/or shroomlight output whilst maintaining self-sustainability. Also used in researching the interplay between the many interoperating mechanisms in a playerless nether tree farm core, and displaying charts on a variety of nether tree farm statistics and phenomena.
 
 - term: NAPP
   aka:
