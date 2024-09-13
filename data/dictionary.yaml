@@ -1,10 +1,4 @@
 
-- term: Auxiliary Processing
-  tags:
-    - Concept
-  description: >-
-    ''
-
 - term: Binary
   aka:
     - bin
@@ -149,22 +143,6 @@
     systems that use codes to transfer instructions. Codes can be a @[Binary]
     signal, a @[Hexadecimal] signal or, less often, octal or quaternary, with
     either multiple or single digits.
-
-- term: FPS
-  aka:
-    - Frames Per Second
-  tags:
-    - Concept
-  description: >-
-    A measure of how many frames a client is able to process each second.
-    This is similar to, but independent of @[TPS], which denotes server-side
-    performance.
-
-- term: External Processing
-  tags:
-    - Concept
-  description: >-
-    ''
 
 - term: FPS
   aka:
@@ -523,3 +501,71 @@
     - Metric
   description: >-
     An array of integers describing the radius of a hat at each layer. For example, a hat height of 6 could give [2,2,2,2,1,2,1]. Can be extended to include the trunk by adding 0's between layer 1 and where the hat starts
+  
+- term: Nylium Replenishers
+  tags:
+    - Mechanic
+  description: >-
+    As nylium can decay into netherrack if random ticked while an opaque block is above it, a system is needed to replenish the netherrack and convert it back to nylium.
+    To convert netherrack into nylium, a nylium block must be within a 1-cubed radius, and bonemeal must be applied to the netherrack. The type of nylium produced is determined by the distribution of surrounding nylium.
+
+- term: External Processing
+  tags:
+    - Optimization
+  description: >-
+    Placing the clock and/or other vital components for a module (usually b36 TNT) outside the module's volume, allowing you to trigger multiple stacked modules from a single universal clock.
+    This reduces materials cost and lag compared to triggering each module individually.
+
+- term: Auxiliary Processing
+  tags:
+    - Optimization
+  description: >-
+    Modules (usually b36 TNT) that function independently but benefit from additional components placed outside their volume. 
+    These benefits can include faster clock speed, additional customizability (e.g., different modes), and lag optimisation.
+
+- term: Vines Region Manipulation (VRM)
+  tags:
+    - Mechanic
+  description: >-
+    Exploits the fact that when generating the vines region, the game checks if a wart block is beneath the block it's about to generate.
+    By preplacing wart blocks of the right variant, you can force the vines region to generate at 100% (if the hat and trunk height are the right size).
+    Explained further by ncolyer here: https://youtu.be/gTH35drzX5Y?t=21 
+
+- term: b36 TNT
+  tags:
+    - Mechanic
+  description: >-
+    Trapping TNT in a moving piston (block 36) reduces entity damage down to 1 while still allowing the TNT blast to damage blocks. 
+    There are three main methods for positioning b36 TNT:
+
+    1. Padded: Shields the TNT blast using generated blocks (e.g., basalt or cobblestone) behind the TNT to protect the module.
+    2. Insertion: Uses a blast-resistant block (e.g., ancient debris or waterlogged stair) behind the TNT to protect the module.
+    3. Bridged: A two-block-high bridge where the TNT rests on the bottom layer and is pushed by the top layer, allowing it to extend multiple blocks from the module.
+
+    Explanation video by Sergent Patate: https://www.youtube.com/watch?v=6gi-DGF8Y4g
+
+- term: Obsidy Tube
+  tags:
+    - Mechanic
+  description: >-
+    Detonates TNT inside an obsidian tube, allowing blast rays to escape only through the corners, reducing entity damage to 1.
+    The downside is that blocks directly adjacent to the TNT in the cardinal directions won't be damaged as the obsidian blocks the rays.
+
+- term: Trunk
+  tags:
+    - Component
+  description: >-
+    The "trunk" of a huge fungus refers to the region where stems generate, the Trunk Region.
+
+- term: Hat
+  tags:
+    - Component
+  description: >-
+    The "hat" of a huge fungus refers to the top area where wart blocks and shroomlights generate. It is analogous to the "leaves" of the fungus.
+
+- term: Regions
+  tags:
+    - Component
+  description: >-
+    The various parts that make up a nether tree, including the Internal, External, Corner, and Trunk Regions, as well as 3 separate Vines Layers.
+    In total, there are 336 possible orientations (332 unique) of these regions (bounding boxes) that can generate.
