@@ -101,77 +101,95 @@
 </nav>
 
 <div class="container text-center" id="main-body">
-    <div class="col-md-1 col-lg-3"></div>
-    <div class="col-md-10 col-lg-6">
-        <h1 class="text-center" style="font-size: 40px;">The Nether Tree Farming Dictionary</h1>
-        <h2 style="font-size: 24px;">This is an open source project. 
-            View the <a href="about.html">about</a> page for more info.</h2>
-        <br>
-        <h3 style="font-size: 20px;">For all storage tech related terms, see the <a href="https://storagetechdictionary.github.io/">Storage Tech Dictionary</a>.</h3>
+    <div class="row">
+        <div class="col-md-1 col-lg-3"></div>
+        <div class="col-md-10 col-lg-6">
+            <h1 class="text-center" style="font-size: 40px;">The Nether Tree Farming Dictionary</h1>
+            <h2 style="font-size: 24px;">This is an open source project. 
+                View the <a href="about.html">about</a> page for more info.</h2>
+            <br>
+            <h3 style="font-size: 20px;">For all storage tech related terms, see the <a href="https://storagetechdictionary.github.io/">Storage Tech Dictionary</a>.</h3>
+        </div>
+        <div class="col-md-1 col-lg-3"></div>
     </div>
-    <div class="col-md-1 col-lg-3"></div>
-    <div class="col-sm-12"></div>
-    
-        <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
-            <i class="fas fa-tools"></i>
-        </button>
-        <div class="display-none">
-            <div class="settings">
 
-                <div class="settings-box">
-                    <p>Reset:</p>
-                    <button class="btn btn-default"
-                            type="button"
-                            onclick="filter_obj = {}; update_window_history(); display_headers_and_table();"
-                    >Filters
-                    </button>
-                    <button class="btn btn-default"
-                            type="button"
-                            onclick="sort_arr = []; update_window_history(); display_headers_and_table();"
-                    >Sorting
-                    </button>
-                </div>
+    <!-- Centered Message Box Section -->
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
+                <i class="fas fa-tools"></i>
+            </button>
+            <div class="display-none">
+                <div class="settings">
+                    <div class="settings-box">
+                        <p>Reset:</p>
+                        <button class="btn btn-default"
+                                type="button"
+                                onclick="filter_obj = {}; update_window_history(); display_headers_and_table();"
+                        >Filters
+                        </button>
+                        <button class="btn btn-default"
+                                type="button"
+                                onclick="sort_arr = []; update_window_history(); display_headers_and_table();"
+                        >Sorting
+                        </button>
+                    </div>
 
-                <div class="settings-box">
-                    <p>Font:</p>
-                    <div class="btn-group">
-                        <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''">
-                            Monospaced
-                        </a>
-                        <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
-                            Normal
-                        </a>
+                    <div class="settings-box">
+                        <p>Font:</p>
+                        <div class="btn-group">
+                            <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''">
+                                Monospaced
+                            </a>
+                            <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
+                                Normal
+                            </a>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
-        <div class="form-inline text-center">
-            <input class="form-control"
-                   id="search"
-                   placeholder="Seach..."
-                   autofocus
-                   type="search"
-                   autocomplete="off"
-            >
-        </div>
-        <p class="input-label">Search in: </p>
-        <input type="checkbox" class="toggle-settings" setting="search_in_term" id="search_in_term"></intput><label class="input-label" for="search_in_term">Term</label>
-        <input type="checkbox" class="toggle-settings" setting="search_in_aka" id="search_in_aka"></intput><label class="input-label" for="search_in_aka">aka</label>
-        <input type="checkbox" class="toggle-settings" setting="search_in_description" id="search_in_description"></intput><label class="input-label" for="search_in_description">Description</label><br>
-        <div class="results">
-            <table class="table table-bordered table-hover text-left" id="output_table">
-                <thead>
-                <tr></tr>
-                </thead>
-                <tbody>
+    </div>
 
-                </tbody>
-            </table>
+    <!-- Search Bar Section -->
+    <div class="row text-center">
+        <div class="col-md-12">
+            <div class="form-inline text-center">
+                <input class="form-control"
+                       id="search"
+                       placeholder="Search..."
+                       autofocus
+                       type="search"
+                       autocomplete="off"
+                >
+            </div>
+            <p class="input-label">Search in: </p>
+            <input type="checkbox" class="toggle-settings" setting="search_in_term" id="search_in_term">
+            <label class="input-label" for="search_in_term">Term</label>
+            <input type="checkbox" class="toggle-settings" setting="search_in_aka" id="search_in_aka">
+            <label class="input-label" for="search_in_aka">aka</label>
+            <input type="checkbox" class="toggle-settings" setting="search_in_description" id="search_in_description">
+            <label class="input-label" for="search_in_description">Description</label><br>
         </div>
     </div>
+
+    <!-- Results Table Section -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="results">
+                <table class="table table-bordered table-hover text-left" id="output_table">
+                    <thead>
+                        <tr></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
     <button onclick="scrollToTop()" id="scrollButton" title="Go to top">
         <i class="fas fa-angle-up"></i>
     </button>
 </div>
-</body>
+
