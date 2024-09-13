@@ -534,15 +534,18 @@
 - term: b36 TNT
   tags:
     - Mechanic
-  description: >-
+  description: |
     Trapping TNT in a moving piston (block 36) reduces entity damage down to 1 while still allowing the TNT blast to damage blocks. 
     There are three main methods for positioning b36 TNT:
 
-    1. Padded: Shields the TNT blast using generated blocks (e.g., basalt or cobblestone) behind the TNT to protect the module.
-    2. Insertion: Uses a blast-resistant block (e.g., ancient debris or waterlogged stair) behind the TNT to protect the module.
-    3. Bridged: A two-block-high bridge where the TNT rests on the bottom layer and is pushed by the top layer, allowing it to extend multiple blocks from the module.
+    1. **Padded**: Shields the TNT blast using generated blocks (e.g., basalt or cobblestone) behind the TNT to protect the module.
+
+    2. **Insertion**: Uses a blast-resistant block (e.g., ancient debris or waterlogged stair) behind the TNT to protect the module.
+
+    3. **Bridged**: A two-block-high bridge where the TNT rests on the bottom layer and is pushed by the top layer, allowing it to extend multiple blocks from the module.
 
     Explanation video by Sergent Patate: https://www.youtube.com/watch?v=6gi-DGF8Y4g
+
 
 - term: Obsidy Tube
   tags:
