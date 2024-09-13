@@ -1,5 +1,5 @@
-# The Storage Tech Dictionary
-A fork of [https://JoakimThorsen.github.io/MCPropertyEncyclopedia](https://JoakimThorsen.github.io/MCPropertyEncyclopedia), used as a dictionary of storage tech-related terms, abbreviations and expressions related to Storage Tech and TMC, curated by contributors from the [Storage Tech Discord server](https://discord.gg/JufJ6uf).
+# The Nether Tree Farming Dictionary
+A fork of https://storagetechdictionary.github.io/ and https://JoakimThorsen.github.io/MCPropertyEncyclopedia, used as a dictionary of nether tree farming-related terms, abbreviations and expressions related to nether tree farming and closely linked fields, and TMC, curated by contributors from the [Huge Fungi Huggers Discord server](https://discord.gg/EKKkyfcPPV).
 
 ## Contributing
 If you wish to add a new term to the dictionary:
@@ -29,3 +29,6 @@ If you are a dictionary curator, then you may merge pull requests of any additio
 
 ## Technical details
 The project is hosted through GitHub Pages. It operates entirely clientside and is written in vanilla js, with [jQuery 3.6](https://jquery.com/) and [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/) being used for the interface. Most icons used are from [Font Awesome](https://fontawesome.com/).
+
+## Credits
+As seen this is a fork, and full credit for this dictionary 'template' goes to the contributors of the original repos: https://storagetechdictionary.github.io/ and https://JoakimThorsen.github.io/MCPropertyEncyclopedia.
