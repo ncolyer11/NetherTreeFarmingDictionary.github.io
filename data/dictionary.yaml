@@ -430,7 +430,7 @@
   description: >-
     Hysteresis circuits are used to buffer a certain amount of an input item, e.g. fungi or bone 
     meal, to always maintain a sufficient supply of that item to a farm. As the buffer begins to 
-    empty, an output signal will be sent to a larger source of that input item, e.g. fungi farm or 
+    empty, an output signal will be sent to a larger source of that input item, e.g. a fungi farm or 
     bone meal decrafter, to provide more of that input item, switching off once the buffer fills up 
     again.
 
