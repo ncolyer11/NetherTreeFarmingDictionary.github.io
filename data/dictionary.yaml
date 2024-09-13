@@ -1,3 +1,10 @@
+
+- term: Auxiliary Processing
+  tags:
+    - Concept
+  description: >-
+    ''
+
 - term: Binary
   aka:
     - bin
@@ -40,8 +47,6 @@
     connectivity) but not yet updated is called "BUDded", and will fire when
     updated. This term is sometimes used to refer to a component that is being
     QC powered by saying it's "BUD powered".
-
-
 
 - term: Comparator Update Detector
   aka:
@@ -155,6 +160,22 @@
     This is similar to, but independent of @[TPS], which denotes server-side
     performance.
 
+- term: External Processing
+  tags:
+    - Concept
+  description: >-
+    ''
+
+- term: FPS
+  aka:
+    - Frames Per Second
+  tags:
+    - Concept
+  description: >-
+    A measure of how many frames a client is able to process each second.
+    This is similar to, but independent of @[TPS], which denotes server-side
+    performance.
+
 - term: Gametick
   aka:
     - gt
@@ -179,6 +200,8 @@
     redstone-tick-repeater.
 
 - term: Global/Local
+  aka:
+    - External Processing
   tags:
     - StorageTech Concept
   description: >-
@@ -330,7 +353,10 @@
 - term: Core
   tags:
     - Concept 
-  description: A repeatable ( Preferably tileable ) component within a system.
+  description: A repeatable ( Preferably tileable ) component within a system. In relation to 
+    nether tree farming, it's a part of the farm that typically involves pistons surrounding a 
+    single nylium block to extract blocks generated from the fungus and move them into a blast 
+    chamber. For @[Playerless] farms, it consists of dispensers facing into a nylium platform.
 
 - term: Solid state
   tags:
@@ -409,3 +435,91 @@
   description: >-
     User interface. The part of a contraption or system that the end user
     interacts with, regardless of the inner workings of the system.
+
+- term: Stemlight
+  tags:
+    - Software
+    - Tools
+  description: >-
+    A collection of huge fungi/nether tree farm related calculators and simulators combined under the alias 'Stemlight'.
+    Is widely used for optimisation nether tree farm layouts to reach the highest theoretical level of stem and/or shroomlight output whilst maintaining self-sustainability. Also used in researching interplay between the many interoperating mechanisms in a playerless nether tree farm core, and displaying charts on a variety of nether tree farm statistics and phenomena.
+
+- term: NAPP
+  aka:
+    - ROPP
+  tags:
+    - Mechanic
+  description: >-
+    Non Arbitrary Piston Placement, mainly used to harvest a specific region of a huge fungus. This is sometimes referred to as Region Orientated Piston Placement (ROPP), which means the same thing.
+
+- term: Self-sustainable
+  tags:
+    - Sustainability
+  description: >-
+    Produces at least 100% of the bonemeal it consumes without external support, using only the byproducts such as wart blocks, shroomlights, weeping vines, and nether foliage.
+
+- term: Externally Self-sustainable
+  tags:
+    - Sustainability
+  description: >-
+    Produces at least 100% of the bonemeal it consumes, including from external sources such as moss or cactus-based bonemeal farms.
+
+- term: Non Self-sustainable
+  tags:
+    - Sustainability
+  description: >-
+    Produces less than 100% of the bonemeal it consumes.
+
+- term: Playerful
+  tags:
+    - Mode
+  description: >-
+    A farm that requires a player to operate. It may or may not be self-sustainable.
+
+- term: Playerless
+  tags:
+    - Mode
+  description: >-
+    A farm that can operate without a player. It may or may not be self-sustainable.
+
+- term: Cycle Speed
+  tags:
+    - Metric
+  description: >-
+    The time it takes for the @[Core] to reset and process one fungus growth, typically measured in game ticks (e.g., 4gt core).
+
+- term: Single-core
+  tags:
+    - Design
+  description: >-
+    A farm with a single planting nylium block and one @[Core], or a single nylium platform for playerless designs.
+
+- term: Dual-core
+  tags:
+    - Design
+  description: >-
+    A farm with two nylium blocks and two @[Cores](Core), often achieved by using trapdoors to place fungus behind and in front of the player, or placing fungus in a 1x2 area of nylium.
+
+- term: Multi-core
+  tags:
+    - Design
+  description: >-
+    A design with multiple @[Cores](Core) within reach of the player, using specific configurations to prevent intersecting wart blocks between cores. For playerless farms, this involves spacing or tiling multiple cores.
+
+- term: n-core
+  tags:
+    - Design
+  description: >-
+    A design with 'n' (usually n ≫1) @[Single-core] tileable modules that the player moves between as fast as possible, spaced for efficient harvesting. For @[Playerless] designs, this involves tiling 'n' @[Cores](Core).
+
+- term: VUNTF
+  tags:
+    - Design
+  description: >-
+    Versatile Universal Nether Tree Farm, capable of harvesting both types of nether trees, mushrooms, and > 5 normal trees (oak, azalea, birch, spruce, acacia, jungle, cherry, mangrove).
+
+- term: Layer Value Sets (LVS)
+  tags:
+    - Metric
+  description: >-
+    An array of integers describing the radius of a hat at each layer. For example, a hat height of 6 could give [2,2,2,2,1,2,1]. Can be extended to include the trunk by adding 0's between layer 1 and where the hat starts
