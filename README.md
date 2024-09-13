@@ -1,5 +1,5 @@
 # The Nether Tree Farming Dictionary
-A fork of https://storagetechdictionary.github.io/ and https://JoakimThorsen.github.io/MCPropertyEncyclopedia, used as a dictionary of nether tree farming-related terms, abbreviations and expressions related to nether tree farming and closely linked fields, and TMC, curated by contributors from the [Huge Fungi Huggers Discord server](https://discord.gg/EKKkyfcPPV).
+A fork of https://storagetechdictionary.github.io/ and https://JoakimThorsen.github.io/MCPropertyEncyclopedia, used as a dictionary of Nether Tree Farming-related terms, abbreviations and expressions related to Nether Tree Farming and closely linked fields, and TMC, curated by contributors from the [Huge Fungi Huggers Discord server](https://discord.gg/EKKkyfcPPV).
 
 ## Contributing
 If you wish to add a new term to the dictionary:
