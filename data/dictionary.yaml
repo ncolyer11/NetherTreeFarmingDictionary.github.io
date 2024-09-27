@@ -541,7 +541,7 @@
   description: >-
     Exploits the fact that when generating the vines region, the game checks if a wart block is beneath the block it's about to generate.
     By preplacing wart blocks of the right variant, you can force the vines region to generate at 100% (if the hat and trunk height are the right size).
-    Explained further by ncolyer here: https://youtu.be/gTH35drzX5Y?t=21 
+    Explained further [by ncolyer here](https://youtu.be/gTH35drzX5Y?t=21) 
 
 - term: b36 TNT
   tags:
@@ -556,8 +556,7 @@
 
     3. **Bridged**: A two-block-high bridge where the TNT rests on the bottom layer and is pushed by the top layer, allowing it to extend multiple blocks from the module.
 
-    Explanation video by Sergent Patate: https://www.youtube.com/watch?v=6gi-DGF8Y4g
-
+    Explanation video by [Sergent Patate](https://www.youtube.com/watch?v=6gi-DGF8Y4g)
 
 - term: Obsidy Tube
   tags:
@@ -565,6 +564,31 @@
   description: >-
     Detonates TNT inside an obsidian tube, allowing blast rays to escape only through the corners, reducing entity damage to 1.
     The downside is that blocks directly adjacent to the TNT in the cardinal directions won't be damaged as the obsidian blocks the rays.
+
+- term: Growth Dispenser
+  tags:
+    - Component
+  description: >-
+    A dispenser that aims above a nylium block to grow a player planted, or nylium generated, fungus.
+
+- term: Nylium Dispenser
+  tags:
+    - Component
+  description: >-
+    A dispenser that aims into a nylium block to grow nether foliage there, including the desired fungus type.
+    Note that these will fail to dispenser bone meal onto the nylium if there is already a foliage block on top of the nylium.
+
+- term: Cleared Dispenser
+  tags:
+    - Component
+  description: >-
+    A nylium dispenser that has a clocked piston above the nylium block it's facing into so the nylium dispenser is never obstructed and always able to bone meal. Note, the dispenser can still be obstructed if it doesn't have first priority amongst a group of other nylium dispensers.
+
+- term: Blocked Block
+  tags:
+    - Component
+  description: >-
+    A block in a nylium platform in a playerless core that doesn't have any foiliage generating at it due to either being obstructed by another block, or there being no nylium there at all for foliage to generate at.
 
 - term: Trunk
   tags:
